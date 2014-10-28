@@ -18,6 +18,19 @@
 // Static Properties.
 static NSMutableArray* _JPDataConverterKnowedDateFormats;
 
+static NSDate *someDateWithNoonWithTimeZone(NSTimeZone *timeZone) {
+    NSDateComponents *components = [[[NSDateComponents alloc] init] autorelease];
+    components.timeZone = timeZone;
+    components.era = 1;
+    components.year = 2001;
+    components.month = 1;
+    components.day = 1;
+    components.hour = 12;
+    components.minute = 0;
+    components.second = 0;
+    return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
+}
+
 ////////////// ////////////// ////////////// ////////////// 
 @implementation JPDataConverter
 
@@ -98,6 +111,8 @@ static NSMutableArray* _JPDataConverterKnowedDateFormats;
 	// Create an Date Formatter.
 	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 	[dateFormatter setDateFormat:anDateFormatter];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"Brazil/East"]];
+    [dateFormatter setDefaultDate:(someDateWithNoonWithTimeZone(dateFormatter.timeZone))];
 	
 	// Convert from NSString to NSDate.
 	if ( [anObject isKindOfClass:[NSString class]] ) 
