@@ -15,6 +15,14 @@
  */
 
 #import "JPHTTPTransporter.h"
+#import "AFHTTPRequestOperation.h"
+
+@interface JPHTTPTransporter ()
+
+/// The HTTP Requester.
+@property (retain) AFHTTPRequestOperation *requester;
+
+@end
 
 @implementation JPHTTPTransporter
 @synthesize requester, validatesSecureCertificate, currentProgress;

@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 #import <Foundation/Foundation.h>
-#import "AFHTTPRequestOperation.h"
 
 // Transport Interfaces.
 #import "JPTransporterHTTPMessage.h"
@@ -72,9 +71,6 @@
 #pragma mark Properties.
 /// Future being processed.
 @property (readonly) id<JPPipelineFuture> future;
-
-/// The HTTP Requester.
-@property (retain) AFHTTPRequestOperation *requester;
 
 /// Should validate any Security Certificate.
 @property (assign) BOOL validatesSecureCertificate;

@@ -197,6 +197,8 @@
 /* Begin PBXProject section */
 		3AEF14FF131826DD00BC3759 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 3AEF1502131826DD00BC3759 /* Build configuration list for PBXProject "JUMPCore" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
@@ -253,6 +255,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = JUMPCore;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -271,6 +274,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = JUMPCore;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -285,6 +289,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = JUMPCore;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -298,6 +303,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = JUMPCore;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -307,7 +313,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -316,7 +322,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
