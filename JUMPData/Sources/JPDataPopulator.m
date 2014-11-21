@@ -103,7 +103,7 @@
 	 * To correct compile, you need to ADD the libobjc.A.dylib framework to your target. And also #import the <objc/runtime.h>
 	 */
     
-    Class propertyClass;
+    Class propertyClass = nil;
 
 	// Get the property (Method) attributes.
 	objc_property_t property = class_getProperty([anObject class], [anProperty UTF8String]);

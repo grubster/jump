@@ -31,6 +31,9 @@
 	
 	/////////// /////// /////// /////// /////// /////// /////// /////// /////// /////// /////// 
 	// Log.
+    
+    // Line commented. App is crashing in devices with the arm64 architecture.
+    /*
 	log4Log(logData.caller,																	// Caller.
 			[logData.lineNumber intValue],													// Line Number.
 			[logData.fileName UTF8String],													// File Name.
@@ -41,6 +44,7 @@
 			YES,																			// Assertion.
 			logData.exception,																// Exception.
 			logData.message);																// Message.
+    */
 }
 
 ///////////// ///////////// ///////////// ///////////// ///////////// ///////////// ///////////// ///////////
